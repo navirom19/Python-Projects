@@ -1,4 +1,4 @@
-# Hi there! 👋 I'm [Your Name] 
+# Hi there! 👋 I'm Naveen Mishra 
 
 Welcome to my GitHub profile! I'm a passionate developer who enjoys working on various tech stacks and building meaningful projects. Feel free to explore my repositories and contributions.
 
@@ -12,13 +12,13 @@ Welcome to my GitHub profile! I'm a passionate developer who enjoys working on v
 - **Others:** GraphQL, REST APIs, Agile, CI/CD
 
 ## 📈 GitHub Stats
-![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&hide_title=true&count_private=true&hide=prs&theme=radical)
+![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=navirom19&show_icons=true&hide_title=true&count_private=true&hide=prs&theme=radical)
 
 ## 🏆 GitHub Streak Stats
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=YOUR_GITHUB_USERNAME&theme=radical)
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=navirom19&theme=radical)
 
 ## 📊 Top Languages
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=radical)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=navirom19&layout=compact&theme=radical)
 
 ## 🔭 Current Focus
 I'm currently focused on improving my skills in:
