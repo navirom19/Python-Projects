@@ -2,6 +2,11 @@
 
 Welcome to my GitHub profile! I'm a passionate developer who loves solving problems and building things that matter. Explore my repositories and feel free to connect with me!
 
+## 👁️‍🗨️ Visitors Count & Total Views
+
+![Profile Views](https://komarev.com/ghpvc/?username=navirom19&color=blueviolet)
+![GitHub Visits](https://visitor-badge.glitch.me/badge?page_id=navirom19.navirom19)
+
 ## 🛠️ Technologies & Tools I Use
 
 ### **Languages**
