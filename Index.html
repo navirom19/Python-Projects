@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Naveen Mishra Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS for additional styling -->
+    <style>
+        body {
+             font-family: 'DM Sans', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin-top: 56px; /* Adjust for fixed navbar */
+        }
+
+        .navbar-brand {
+            font-size: 1.75rem;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #1c1c1c, #0d6efd);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1), rgba(0,0,0,0) 70%);
+            opacity: 0.5;
+            pointer-events: none;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.3;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ffffff, #00c4a7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textGlow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow:   0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+            }
+            to {
+                text-shadow: 0 0 20px #ffffff, 0 0 40px #0071e3, 0 0 60px #00c4a7;
+            }
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .social-icons a {
+            font-size: 1.5rem;
+            margin-right: 20px;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #00c4a7;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 0;
+            border-radius: 10px;
+            background: #1a1a1a;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+@keyframes lights {
+  0% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+  30% { 
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  40% { 
+    color: hsl(230, 100%, 95%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  70% {
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  100% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+}
+
+        section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+            
+			animation: lights 5s 100ms linear infinite;
+        }
+
+        /* Skills Section */
+        .skill-item {
+            text-align: center;
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+			
+        }
+
+        .skill-item i {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .skill-item i:hover {
+            color: #00c4a7;
+            transform: scale(1.1);
+        }
+
+        /* Card Styling */
+        .card {
+            border-radius: 10px;
+            background: #2c2c2c;
+            border: 1px solid #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s, transform 0.3s;
+            height: 100%;
+        }
+
+        .card-body {
+            color: #e0e0e0;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            transform: scale(1.02);
+        }
+
+
+
+
+
+        .btn-primary {
+            background-color: #0071e3;;
+            border-color: #0071e3;;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color:  #283747 ;
+            border-color:  #283747 ;
+        }
+
+     
+        /* Footer */
+        .footer {
+           background: linear-gradient(135deg,#1c1c1c , #0d6efd,#1c1c1c );
+            
+            padding: 20px;
+            text-align: center;
+        }
+		
+		        }
+        .education-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .education-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .education-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .education-item h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #0073e6;
+        }
+        .education-item p {
+            margin: 5px 0;
+            font-size: 1em;
+            color: #666;
+        }
+        .education-item .institution {
+            font-weight: bold;
+            color: #333;
+        }
+        .education-item .duration {
+            font-style: italic;
+            color: #888;
+        }
+        .education-item .details {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+					<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Hello, I'm a Naveen Mishra</h1>
+        <p>A Data Processing Analyst with 2+ years of experience. My skills include Excel, Power BI, Tableau, SQL, SPSS, MRDCL, and Quantum.</p>
+        <div class="social-icons mt-4">
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> 
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <p class="text-center">I'm Naveen Mishra, a Data Analyst with over two years of experience working with clients like Nielsen and Ipsos, where I specialized in using tools like SPSS, Quantum, MRDCL, and Power BI to turn data into actionable insights. I’ve also worked on projects for well-known brands like Paytm, Airtel, Oppo, and Vivo, which strengthened my expertise in data-driven decision-making.
+In addition to my professional experience, I am pursuing an integrated BCA-MCA program from IGNOU. This ongoing education further enhances my technical skills and keeps me updated with the latest advancements in data analysis and computing.
+I also have basic knowledge in web development technologies like HTML, CSS, Java, and Servlets, which complements my analytical skills and helps me adapt to different roles. I’m passionate about problem-solving, learning new tools, and working collaboratively to drive business success.
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="container">
+            <div class="row justify-content-center">
+                
+				
+				<p align="center">
+  
+    <img src=https://img.icons8.com/?size=60&id=117561&format=png&color=000000"> <!-- Excel --!>
+	<img src="https://img.icons8.com/?size=65&id=qYfwpsRXEcpc&format=png&color=000000"> <!-- PowerBI --!>
+	<img src=https://img.icons8.com/?size=48&id=9Kvi1p1F0tUo&format=png&color=000000"> <!-- Tableau --!>
+	<img src=https://img.icons8.com/?size=57&id=13406&format=png&color=000000"> <!-- SQL --!>
+	<img src="https://skillicons.dev/icons?i=git,github,html,css,java"/>
+	
+	
+	
+ 
+</p>
+				
+            </div>
+        </div>
+    </section>
+
+<!-- Experience --!>
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="container">
+			<div class="row">
+    
+<!-- For Card Body 	<div class="col-md-6">
+                    <div class="card mb-4">    -->
+                        <div class="card-body">
+                            <h5 class="card-title">Data Processing Analyst, Pvalue Analyst</h5>
+                            <p class="card-text"><strong>October 2019 - July 2024</strong></p>
+                            <ul>
+                            <li>Utilized SPSS for comprehensive data collection and processing.</li>
+							<li>Performed data processing, statistical analysis, and data cleaning using MRDCL and Quantum.</li>
+							<li>Created advanced Pivot Tables and conducted data analysis using Excel functions, including VLOOKUP and HLOOKUP.</li>
+							<li>Applied weightings and statistical techniques for data analysis and ensured quality control of data tables.</li>
+							<li>Performed data-driven analysis to provide actionable insights for marketing strategies.</li>
+							</ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </section>
+
+<!-- Education --!>
+    
+        <h2>Education</h2>
+        <div class="education-section">
+    <div class="education-item">
+        <h3>BCA-MCA Integrated</h3>
+        <p class="institution">Indira Gandhi National Open University</p>
+        <p class="duration">Year of Graduation: [Insert Year]</p>
+        <div class="details">
+            <p>Relevant Coursework: [Insert Relevant Courses]</p>
+            <p>Achievements: [Insert Achievements, if any]</p>
+        </div>
+    </div>
+    <div class="education-item">
+        <h3>Intermediate (CBSE)</h3>
+        <p class="institution">NSK Sr. High School</p>
+        <p class="duration">Year of Completion: [Insert Year]</p>
+        <div class="details">
+            <p>Major Subjects: [Insert Major Subjects]</p>
+            <p>Achievements: [Insert Achievements, if any]</p>
+        </div>
+    </div>
+</div>
+
+
+				
+				
+				
+				
+				
+				
+				
+                </div>
+            </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="project1.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Student Feedback Form</h5>
+							<ul>
+                            <li>Technology Used: Java, JSP, HTML, CSS, MYSQL, Apache Tomcat.</li>
+							<li>Developed a web-based application for collecting and managing student feedback on academic courses and instructors. 
+							<li>The system allows students to fill out feedback forms, rate teachers on various criteria, and provide comments. 
+							<li>Administrators can log in to view the feedback, analyze ratings, and make data-driven decisions to improve educational quality.
+							</ul>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="cert1.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Power BI Beginner to Pro Workshop</h5>
+                            <p class="card-text">Certification in Power BI Beginner to Pro Workshop by Pragmatic Works, demonstrating expertise in Power BI, Data visualization and data analysis.</p>
+                            <a href="https://certificationcompletion.blob.core.windows.net/certifications/PowerBIBeginnertoProWorkshop-NaveenMishra" class="btn btn-primary">View Certification</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="cert2.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Excel Skills Virtual Experience Program</h5>
+                            <p class="card-text">Certification in Excel Skills Virtual Experience Program by JPMorgan Chase & Co, validating skills in data visualization and dashboard creation.</p>
+                            <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/JPMorgan%20Chase%20%26%20Co./XiuvjcwqWRqH9oy38_JPMorgan%20Chase%20%26%20Co._LnKqmxYvnejQv3sdg_1682584684982_completion_certificate.pdf" class="btn btn-primary">View Certification</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="cert3.jpg" class="card-img-top" alt="Certification 3">
+                        <div class="card-body">
+                            <h5 class="card-title">SQL for Data Analysis</h5>
+                            <p class="card-text">Certification in SQL for Data Analysis, showcasing proficiency in database querying and data manipulation.</p>
+                            <a href="#" class="btn btn-primary">View Certification</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+ <!-- Contact Section
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>👨🏻‍💻 Developed by Naveen Mishra &#x2764;</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
